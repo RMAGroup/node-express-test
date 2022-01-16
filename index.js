@@ -1,5 +1,8 @@
 const foods = require('./foods.json')
+const cors = require('cors')
 const app = require('express')()
+
+app.use(cors('*'))
 
 app.get('/', (req, res) => {
     res.send('<h1>Express App</h1>')

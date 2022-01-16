@@ -1,17 +1,12 @@
-/*
-
-1. required / mport in http server framework
-1. create new instance of express
-2. add endpoints / routing / api
-3. configure port to listen on
-4. start server 
-
-*/
-
+const foods = require('./foods.json')
 const app = require('express')()
 
 app.get('/', (req, res) => {
     res.send('<h1>Express App</h1>')
+})
+
+app.get('/foods', (req, res) => {
+    res.json(foods)
 })
 
 const PORT = process.env.PORT || 80

@@ -1,0 +1,8 @@
+version: '3.8'
+services:
+  app:
+    image: paulyk/node-express-test
+    container_name: node-express-test
+    build: .
+    ports:
+      - "80:80"
